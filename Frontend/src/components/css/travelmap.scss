@@ -1,0 +1,104 @@
+.travelmap {
+  $gray: #707070;
+  $yellow: #F4EEC8;
+  $logo: #f4eec8;
+  $cobalt: #2f3d63;
+  $gray: #707070;
+  $black: #070707;
+  $green: #b7dccc;
+  $aqua: #ED7766;
+  $white: #FFFFFF;
+
+  @import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
+
+  $hulu: 'Nunito Sans', sans-serif;
+  $heading: 'Montserrat', sans-serif;
+  $body: 'Roboto', sans-serif;
+
+  position: absolute;
+  top: 49%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .btn {
+    width: 120px;
+    height: 120px / 108 * 37;
+    margin-left: 2rem;
+    background: $green;
+    border: none;
+    border-radius: 30px;
+    color: $yellow;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba($gray, .5);
+    &:hover {
+      background-color: #adc7bc;
+      transition: 0.5s ease;
+    }
+    a {
+      text-decoration: none;
+      color: $yellow;
+    }
+  }
+
+  .travel-title {
+    // position: absolute;
+    // top: 10%;
+    // left: 25%;
+  }
+
+  .info-section {
+    // position: absolute;
+    // top: 85%;
+    // left: 25%;
+    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $green;
+    margin-top: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    .comment {
+      margin-left: 20px;
+    }
+    .date {
+      margin-right: 20px;
+    }
+  }
+
+  .google-map {
+
+
+    width: 1280px;
+    height: 900px;
+    .window-wrap {
+      cursor: pointer;
+      background-color: #f4eec8;
+      border-radius: 10px;
+      
+      .window-image {
+        height: 100px;
+      }
+      img {
+        border-radius: 10px;
+      }
+      .content {
+        padding: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    
+    box-shadow: 3px 3px 10px rgba($gray, .5);
+
+  }
+}

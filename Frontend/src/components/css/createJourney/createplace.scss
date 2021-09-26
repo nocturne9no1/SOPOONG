@@ -1,0 +1,402 @@
+.pintest {
+  $gray: #707070;
+  $yellow: #F4EEC8;
+  $logo: #f4eec8;
+  $cobalt: #2f3d63;
+  $gray: #707070;
+  $black: #070707;
+  $green: #b7dccc;
+  $aqua: #ED7766;
+  $white: #FFFFFF;
+
+  @import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
+
+  $hulu: 'Nunito Sans', sans-serif;
+  $heading: 'Montserrat', sans-serif;
+  $body: 'Roboto', sans-serif;
+
+  .google-map {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 1280px;
+    height: 900px;
+  }
+
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .modal-body {
+      position: absolute;
+      
+      border-radius: 20px;
+      top: 50%;
+      left: 50%;
+
+      width: 1200px;
+      height: 800px;
+
+      padding: 20px;
+
+      background-color: $yellow;
+
+      transform: translateX(-50%) translateY(-50%);
+
+      display: flex;
+
+      
+      .image {
+        margin: auto;
+        width: 700px;
+        max-height: 700px;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+        .pic {
+          max-width:700px;
+          max-height:700px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
+      }
+      .image-2 {
+        width: 100px;
+        z-index: 1;
+        .pic {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        width: 400px;
+
+        h3 {
+          font-family: $body;
+          font-size: 15px;
+          text-align: center;
+        }
+
+        p {
+          border-width: 1px;
+          border-style: solid;
+          border-image: linear-gradient(to right, black, rgba(black, 1)) 1 0%;
+          border-top: 0;
+          width: 80%;
+          font-family: black;
+          font-size: .7em * 1.5;  // 한거 안한거 뭐가 더 낫지?
+          // font-size: 1em;
+          padding: 7px 0;
+          color: black;
+        }
+        input {
+          width: 80%;
+          font-family: $body;
+          padding: 10px;
+          margin: 0;
+          background-color: transparent;
+          border: 1px solid $aqua;
+          border-radius: 5px;
+          &:focus {
+            outline: none !important;
+            border: 1px solid $green;
+            background-color: #f1e69e;
+            transition: ease 0.4s
+          }
+        }
+        
+      fieldset {
+        margin: 0;
+        padding: 10px;
+        box-shadow: 1px 2px 2px rgba($gray, .5);
+      }
+      .category {
+        width: 80%;
+        border: 1px solid $aqua;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .category-btns {
+          button {
+            width: 90px;
+            height: 50px;
+
+            img {
+              height: 100%;
+            }
+          }
+          .hotel {
+            border-radius: 15px 5px 5px 15px;
+            background-color: #b7dccc;
+            border: none;
+            cursor: pointer;
+            box-shadow: 1px 2px 5px rgba($gray, .8);
+          }
+          .res {
+            border-radius: 5px 5px 5px 5px;
+            background-color: #ed7766;
+            border: none;
+            cursor: pointer;
+            box-shadow: 1px 2px 5px rgba($gray, .8);
+          }
+          .activity {
+            border-radius: 5px 15px 15px 5px;
+            background-color: #2f3d63;
+            border: none;
+            cursor: pointer;
+            box-shadow: 1px 2px 5px rgba($gray, .8);
+          }
+        }
+      }
+
+        .sub-category {
+          select {
+            /* Reset Select */
+            appearance: none;
+            outline: 0;
+            border: 0;
+            box-shadow: none;
+            /* Personalize */
+            flex: 1;
+            padding: 0 1em;
+            color: white;
+            background-color: #d6cfa0;
+            background-image: none;
+            cursor: pointer;
+          }
+          /* Remove IE arrow */
+          select::-ms-expand {
+            display: none;
+          }
+          /* Custom Select wrapper */
+          .select {
+            position: relative;
+            display: flex;
+            margin-top: 10px;
+            width: 19em;
+            height: 2em;
+            border-radius: .25em;
+            overflow: hidden;
+            &::after {
+              content: '\25BC';
+              position: absolute;
+              right: 0;
+              padding: 1em;
+              padding-top: 0.3em;
+              background-color: #d6cfa0;
+              transition: .25s all ease;
+              pointer-events: none;
+            }
+            &:hover::after {
+              color: #f39c12;
+            }
+          }
+        }
+      }
+
+      .transport {
+        width: 80%;
+        border: 1px solid $aqua;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        .transport-icons {
+          display: flex;
+          justify-content: space-evenly;
+          height: 30px;
+        }
+        .nothing {
+          width: 100%;
+          span {
+            &:hover {
+              color: $gray;
+              transition: ease 0.5s;
+              cursor: default;
+            }
+          }
+        }
+        .hotel {
+          width: 100%;
+          span {
+            &:hover {
+              color: #b7dccc;
+              transition: ease 0.5s;
+              cursor: pointer;
+            }
+          }
+
+          .active {
+            color: #b7dccc;
+          }
+        }
+        .res {
+          width: 100%;
+          span {
+            &:hover {
+              color: #ed7766;
+              transition: ease 0.5s;
+              cursor: pointer;
+            }
+          }
+
+          .active {
+            color: #ed7766;
+          }
+        }
+        .activity {
+          width: 100%;
+          span {
+            &:hover {
+              color: #2f3d63;
+              transition: ease 0.5s;
+              cursor: pointer;
+            }
+          }
+
+          .active {
+            color: #2f3d63;
+          }
+        }
+        span {
+          color: white;
+        }
+
+      }
+
+      .rating {
+        .rates {
+          $hotel: #b7dccc;
+          $res: #ed7766;
+          $activity: #2f3d63;
+
+          label{
+            float: right;
+            width:40px;
+            height:10px;
+            background:#ccc;
+            margin:4px;
+            position: relative;
+            transition:all .3s;
+            cursor: pointer;
+          }
+
+          input{
+            display:none;
+          }
+          .rating-system {
+            width:auto;
+            margin:20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            .rate-name {
+              width: 50px;
+            }
+            .bars {
+              width: 250px;
+            }
+          } 
+
+
+          
+          .rating-system label:before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height:100%;
+            background: inherit;
+            top:0;
+            left:0;
+            transition:all 0.3s;
+          }
+          
+          .hotel {
+            .rating-system input:checked ~ label,
+            .rating-system label:hover ~ label,
+            .rating-system label:hover{
+              background: $hotel;
+            }
+          }
+
+          .res {
+            .rating-system input:checked ~ label,
+            .rating-system label:hover ~ label,
+            .rating-system label:hover{
+              background: $res;
+            }
+          }
+
+          .activity {
+            .rating-system input:checked ~ label,
+            .rating-system label:hover ~ label,
+            .rating-system label:hover{
+              background: $activity;
+            }
+          }
+
+          .rating-system input:checked ~ label:before{
+            transform:rotate(90deg);
+          }
+
+
+
+        }
+
+
+      }
+
+      .content {
+        textarea {
+          width: 80%;
+          height: 200px;
+          padding: 10px;
+          border: none;
+          
+          background-color: transparent;
+          border: 1px solid $aqua;
+          border-radius: 5px;
+          &:focus {
+            outline: none !important;
+            border: 1px solid $green;
+            background-color: #f1e69e;
+            transition: ease 0.4s
+          }
+          &::-webkit-resizer {
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+
+  .next-btn {
+    display: block;
+    position: fixed;
+    right: 20%;
+    top: 15%;
+    margin-top: 5%;
+    padding: 10px 20px;
+    background-color: $aqua;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px rgba($gray, .5);
+    font-family: $body;
+  }
+}

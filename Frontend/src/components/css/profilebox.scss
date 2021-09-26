@@ -1,0 +1,77 @@
+.profile-box {
+  $gray: #707070;
+  $yellow: #F4EEC8;
+  
+  display: inline-block;
+  position: absolute;
+  margin-top: 10rem;
+  margin-left: 5%;
+  // margin-right: 10%;
+  vertical-align: top;
+  width: 280px;
+  height: 430px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba($gray, .5);
+  .setting-btn {
+    // float: right;
+    text-align: end;
+    .setting-icon {
+      color: black;
+      &:hover {
+        
+      }
+    }
+  }
+  
+  .container {
+    margin-top: 1.2rem;
+    .profile-photo-box {
+
+      height: 140px;
+      width: 140px;
+      border-radius: 70%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      top:12%;
+
+      .photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text-box {
+      margin-top: 1.2rem;
+      position: relative;
+      top: 50%;
+      text-align: center;
+
+      .nickname {
+        font-size: 25px;
+      }
+
+      .email {
+        font-size: 13px;
+        margin-top: 10px;
+      }
+
+      .introduce {
+        margin-top: 1.2rem;
+        font-size: 22px;
+      }
+
+      .follow {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  
+}
