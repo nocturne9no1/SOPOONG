@@ -66,12 +66,10 @@
 
 ### Frontend
 
-```
 <details>
   <summary>펼치기 / 접기</summary>
   <div>
-
-​```
+```
 📁frontend
 └── 📁src
     ├── 📁assets
@@ -95,13 +93,14 @@
     │   ├── 📁travel
     │   └── 📁personal
     └── App
-​```
-
+```
   </div>
 </details>
-```
+
 
 ### Backend
+
+
 
 
 
